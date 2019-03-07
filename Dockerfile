@@ -72,6 +72,6 @@ ENV GUACAMOLE_HOME=/config/guacamole
 
 WORKDIR /config
 
-COPY root /
+COPY . .
 
 ENTRYPOINT [ "/init" ]
