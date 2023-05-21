@@ -10,7 +10,7 @@ ENV ARCH=aarch64 \
 
 # Apply the s6-overlay
 
-RUN curl -SLO "https://github.com/just-containers/s6-overlay/releases/download/v3.1.4.2/s6-overlay-${ARCH}.tar.gz" \
+RUN curl -SLO "https://github.com/just-containers/s6-overlay/releases/download/v3.1.5.0/s6-overlay-${ARCH}.tar.gz" \
   && tar -xzf s6-overlay-${ARCH}.tar.gz -C / \
   && tar -xzf s6-overlay-${ARCH}.tar.gz -C /usr ./bin \
   && rm -rf s6-overlay-${ARCH}.tar.gz \
