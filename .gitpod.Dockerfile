@@ -9,8 +9,9 @@ ENV ARCH=aarch64 \
   POSTGRES_DB=guacamole_db
 
 # Apply the s6-overlay
+RUN apt-get update && apt-get install xz-utils -y
 
-RUN curl -SLO "https://github.com/just-containers/s6-overlay/releases/download/v3.1.5.0/s6-overlay-${ARCH}.tar.gz" \
+RUN curl -SLO "https://github.com/just-containers/s6-overlay/releases/download/v3.1.5.0/s6-overlay-${ARCH}.tar.xz" \
   && tar -xzf s6-overlay-${ARCH}.tar.gz -C / \
   && tar -xzf s6-overlay-${ARCH}.tar.gz -C /usr ./bin \
   && rm -rf s6-overlay-${ARCH}.tar.gz \
